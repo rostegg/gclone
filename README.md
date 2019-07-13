@@ -1,3 +1,6 @@
+## Easy clone your repository with pretty look and autocompletion  
+![](../assets/example.svg)
+
 ## Installation  
 You can clone repository and run `install.sh` script, but it will be easier to use one-liners:
 * Wget  
