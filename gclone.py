@@ -81,15 +81,15 @@ def clone_repository(url):
         exit(1)
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--update_cache", help="update cached repositories list",
+parser.add_argument("--update-cache", help="update cached repositories list",
                     action="store_true")
-parser.add_argument("--clear_cache", help="delete cached repositories list",
+parser.add_argument("--clear-cache", help="delete cached repositories list",
                     action="store_true")
-parser.add_argument("--clear_config", help="delete config file",
+parser.add_argument("--clear-config", help="delete config file",
                     action="store_true")
 parser.add_argument("--user", help="github username",
                     action="store")
-parser.add_argument("--set_user", help="set github username global",
+parser.add_argument("--set-user", help="set github username global",
                     action="store")
 
 args = parser.parse_args()
@@ -133,7 +133,7 @@ def read_cache(user = current_user):
         return update_cache(user)  
 
 def get_repositories_list(user):
-    url = ('%s/%s/repos')%(endpoint,user)
+    url = ('%s/%s/repos?per_page=1000')%(endpoint,user)
 
     request = Request(url, headers=headers)
     try:
